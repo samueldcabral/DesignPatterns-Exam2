@@ -8,4 +8,4 @@
 | Ex 4      | To do | :skull: |
 | Ex 5      | To do | :skull: |
 | Ex 6      | To do | :skull: |
-| Ex 7      | Done | :fire |
+| Ex 7      | Done | :fire: |
