@@ -2,7 +2,7 @@
 
 | Exercicio | Status| Emoji
 | ------------- |:-------------:|:-----------:|
-| Ex 1      | To do | :skull: |
+| Ex 1      | Doing/Testing | :gear: |
 | Ex 2      | To do | :skull: |
 | Ex 3      | To do | :skull: |
 | Ex 4      | To do | :skull: |
