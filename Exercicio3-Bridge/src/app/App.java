@@ -1,7 +1,7 @@
 package app;
 
 import model.AbstracaoLista;
-import model.ImplementacaoImprime;
+import model.ImplementacaoMarcador;
 import model.ListaNaoOrdenada;
 import model.ListaOrdenada;
 import model.MarcadorGenerico;
@@ -12,39 +12,40 @@ public class App {
 
 	public static void main(String[] args) {
 		// Lista ordenada
-		AbstracaoLista listaOrdenada = new ListaOrdenada();
-		ImplementacaoImprime marcadorNumeral = new MarcadorNumeral(listaOrdenada);
+		ImplementacaoMarcador marcadorNumeral = new MarcadorNumeral();
+
+		AbstracaoLista listaOrdenada = new ListaOrdenada(marcadorNumeral);
 		listaOrdenada.adicionar("Samuel");
 		listaOrdenada.adicionar("Ana");
 		listaOrdenada.adicionar("Carlota");
 		listaOrdenada.adicionar("Zilda");
 		listaOrdenada.adicionar("Natalia");
 		
-		marcadorNumeral.imprimir();
+		listaOrdenada.imprimir();
 		
 		System.out.println("\n------------------------------------\n");
 		//Lista Nao Ordenada
-		AbstracaoLista listaNaoOrdenada = new ListaNaoOrdenada();
-		ImplementacaoImprime marcadorLetra = new MarcadorLetra(listaNaoOrdenada);
+		ImplementacaoMarcador marcadorLetra = new MarcadorLetra();
+		AbstracaoLista listaNaoOrdenada = new ListaNaoOrdenada(marcadorLetra);
 		listaNaoOrdenada.adicionar("Samuel");
 		listaNaoOrdenada.adicionar("Ana");
 		listaNaoOrdenada.adicionar("Carlota");
 		listaNaoOrdenada.adicionar("Zilda");
 		listaNaoOrdenada.adicionar("Natalia");
 		
-		marcadorLetra.imprimir();
+		listaNaoOrdenada.imprimir();
 		
 		System.out.println("\n------------------------------------\n");
 		//Lista Nao Ordenada
-		AbstracaoLista listaOrdenada2 = new ListaOrdenada();
-		ImplementacaoImprime marcadorGen = new MarcadorGenerico(listaOrdenada2, "*");
+		ImplementacaoMarcador marcadorGen = new MarcadorGenerico("*");
+		AbstracaoLista listaOrdenada2 = new ListaOrdenada(marcadorGen);
 		listaOrdenada2.adicionar("Zeze");
 		listaOrdenada2.adicionar("Didi");
 		listaOrdenada2.adicionar("Lady Gaga");
 		listaOrdenada2.adicionar("Roberto Carlos");
 		listaOrdenada2.adicionar("Fonz");
 		
-		marcadorGen.imprimir();
+		listaOrdenada2.imprimir();
 	
 	}
 }

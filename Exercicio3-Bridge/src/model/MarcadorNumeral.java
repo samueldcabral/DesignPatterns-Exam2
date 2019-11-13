@@ -1,18 +1,12 @@
 package model;
 
-public class MarcadorNumeral extends ImplementacaoImprime{
+public class MarcadorNumeral extends ImplementacaoMarcador{
 
-	public MarcadorNumeral(AbstracaoLista lista) {
-		super(lista);
+	public MarcadorNumeral() {
 	}
 
 	@Override
-	public void imprimir() {
-		int index = 0;
-		for(String item : minhaLista.lista) {
-			String itemImprime = minhaLista.imprimir(index);
-			index++;
-			System.out.println(index + ") " + itemImprime );
-		}
+	public String imprimirMarcador(int index) {
+		return (index + 1) + ")";
 	}
 }

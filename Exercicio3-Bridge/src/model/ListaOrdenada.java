@@ -3,8 +3,10 @@ package model;
 import java.util.Collections;
 
 public class ListaOrdenada implements AbstracaoLista{
+	private ImplementacaoMarcador marcador;
 
-	public ListaOrdenada() {
+	public ListaOrdenada(ImplementacaoMarcador marcador) {
+		this.marcador = marcador;
 		lista.clear();
 	}
 	
@@ -15,8 +17,13 @@ public class ListaOrdenada implements AbstracaoLista{
 	}
 
 	@Override
-	public String imprimir(int index) {
-		return lista.get(index);
+	public void imprimir() {
+		int index = 0;
+		
+		for(String item : lista) {
+			String m = marcador.imprimirMarcador(index);
+			System.out.println(m + " " + item);
+			index++;
+		}
 	}
-
 }

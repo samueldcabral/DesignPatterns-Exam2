@@ -1,20 +1,16 @@
 package model;
 
-public class MarcadorGenerico extends ImplementacaoImprime{
-	protected String marcador;
+public class MarcadorGenerico extends ImplementacaoMarcador{
+	protected String marcadorGenerico;
 
-	public MarcadorGenerico(AbstracaoLista lista, String marcador) {
-		super(lista);
-		this.marcador = marcador;
+	public MarcadorGenerico(String marcador) {
+		this.marcadorGenerico = marcador;
 	}
 
 	@Override
-	public void imprimir() {
-		int index = 0;
-		for(String item : minhaLista.lista) {
-			String itemImprime = minhaLista.imprimir(index);
-			System.out.println(this.marcador + " " + itemImprime );
-			index++;
-		}
+	public String imprimirMarcador(int index) {
+		return marcadorGenerico;
 	}
+
+
 }
