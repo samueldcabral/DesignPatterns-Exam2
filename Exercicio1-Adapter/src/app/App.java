@@ -1,6 +1,7 @@
 package app;
 
 import java.util.HashMap;
+import java.util.TreeMap;
 
 import model.AdapterMatrix;
 
@@ -13,18 +14,35 @@ public class App {
 							{"Chave 3", "Valor 3"}
 													};
 		
-		AdapterMatrix adaptador = new AdapterMatrix();
+		//Exemplo com Hash Map
+		HashMap<String, String> typeMap = new HashMap<>();
+		AdapterMatrix adaptador = new AdapterMatrix(typeMap);
 		
 		HashMap<String, String> meuHash = new HashMap<>();
 		
-		meuHash = adaptador.adapterMap(matrix);
+		meuHash = (HashMap<String, String>) adaptador.adapterMap(matrix);
 		
+		System.out.println("Imprimindo Hash Map....\n");
 		meuHash.entrySet().forEach(entry -> {
 		    System.out.println(entry.getKey() + " - " + entry.getValue());  
 		 });
 		
 		System.out.println("\n" + meuHash);
+	
+		System.out.println("\n------------------------------------------------\n");
+		//Exemplo com Tree Map
+		TreeMap<String, String> typeTree = new TreeMap<>();
+		AdapterMatrix adaptadorNovo = new AdapterMatrix(typeTree);
 		
+		TreeMap<String, String> meuTree = new TreeMap<>();
+		
+		meuTree = (TreeMap<String, String>) adaptadorNovo.adapterMap(matrix);
+		
+		System.out.println("Imprimindo Tree Map....\n");
+		meuTree.entrySet().forEach(entry -> {
+			System.out.println(entry.getKey() + " - " + entry.getValue());
+		});
+		
+		System.out.println("\n" + meuTree);
 	}
-
 }

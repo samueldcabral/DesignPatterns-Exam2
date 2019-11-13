@@ -1,11 +1,16 @@
 package model;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class AdapterMatrix {
-	HashMap<String, String> map = new HashMap<>();
+	Map<String, String> map;
+			
+	public AdapterMatrix(Map<String, String> mapa) {
+		this.map = mapa;
+	}
 	
-	public HashMap adapterMap(String[][] matrix) {
+	public Map adapterMap(String[][] matrix) {
 		
 		for(int i = 0; i < matrix.length; i++) {
 			for(int j = 0; j < matrix[i].length; j++) {
