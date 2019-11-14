@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Linha implements Component{
-	private List<Celula> celulas = new ArrayList<>();
+	private List<Component> celulas = new ArrayList<>();
 	
 	public void adicionar(Celula c) {
 		celulas.add(c);
@@ -21,7 +21,7 @@ public class Linha implements Component{
 		for(int i = 0; i < tamanho; i++) {
 			linha[i] = '-';
 		}
-		for(Celula c : celulas) {
+		for(Component c : celulas) {
 			c.imprimir();
 		}
 		System.out.println(conteudoCelula);

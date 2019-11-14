@@ -5,14 +5,14 @@ import java.util.List;
 
 public class Tabela implements Component {
 
-	private List<Linha> linhas = new ArrayList<>();
+	private List<Component> linhas = new ArrayList<>();
 	
 	public void adicionar(Linha l) {
 		linhas.add(l);
 	}
 	
 	public void imprimir() {
-		for(Linha l : linhas) {
+		for(Component l : linhas) {
 			l.imprimir();
 		}
 	}

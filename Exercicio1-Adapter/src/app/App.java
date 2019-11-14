@@ -20,7 +20,7 @@ public class App {
 		
 		HashMap<String, String> meuHash = new HashMap<>();
 		
-		meuHash = (HashMap<String, String>) adaptador.adapterMap(matrix);
+		meuHash = (HashMap<String, String>) adaptador.getMap(matrix);
 		
 		System.out.println("Imprimindo Hash Map....\n");
 		meuHash.entrySet().forEach(entry -> {
@@ -36,7 +36,7 @@ public class App {
 		
 		TreeMap<String, String> meuTree = new TreeMap<>();
 		
-		meuTree = (TreeMap<String, String>) adaptadorNovo.adapterMap(matrix);
+		meuTree = (TreeMap<String, String>) adaptadorNovo.getMap(matrix);
 		
 		System.out.println("Imprimindo Tree Map....\n");
 		meuTree.entrySet().forEach(entry -> {
