@@ -6,8 +6,8 @@ public class Pasta implements Component {
 	private String nome;
 	private int quantidadeArquivos;
 	private int quantidadeSubPastas;
-	private ArrayList<Arquivo> arquivos = new ArrayList<>();
-	private ArrayList<Pasta> subpastas = new ArrayList<>();
+	private ArrayList<Component> arquivos = new ArrayList<>();
+	private ArrayList<Component> subpastas = new ArrayList<>();
 
 	public Pasta(String nome) {
 		this.nome = nome;
@@ -21,11 +21,11 @@ public class Pasta implements Component {
 		this.nome = nome;
 	}
 
-	public ArrayList<Arquivo> getArquivos() {
+	public ArrayList<Component> getArquivos() {
 		return arquivos;
 	}
 
-	public void setArquivos(ArrayList<Arquivo> arquivos) {
+	public void setArquivos(ArrayList<Component> arquivos) {
 		this.arquivos = arquivos;
 	}
 
@@ -37,11 +37,11 @@ public class Pasta implements Component {
 		this.arquivos.remove(arquivo);
 	}
 	
-	public ArrayList<Pasta> getSubpastas() {
+	public ArrayList<Component> getSubpastas() {
 		return subpastas;
 	}
 
-	public void setSubpastas(ArrayList<Pasta> subpastas) {
+	public void setSubpastas(ArrayList<Component> subpastas) {
 		this.subpastas = subpastas;
 	}
 
@@ -59,11 +59,11 @@ public class Pasta implements Component {
 		
 		System.out.println("Pasta: " + this.nome + " tem " + this.quantidadeArquivos + " arquivos e " + this.quantidadeSubPastas + " subpastas.\n");
 
-		for(Arquivo arquivo : arquivos) {
+		for(Component arquivo : arquivos) {
 			arquivo.imprimir();
 		}
 		
-		for(Pasta pasta : subpastas) {
+		for(Component pasta : subpastas) {
 			pasta.imprimir();
 		}
 	}
