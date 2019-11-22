@@ -2,7 +2,7 @@
 
 | Exercicio | Status| Emoji
 | ------------- |:-------------:|:-----------:|
-| Ex 1      | Done | :fire: |
+| Ex 1      | Doing/Testing | :gear: |
 | Ex 2      | Done | :fire: |
 | Ex 3      | Doing/Testing | :gear: |
 | Ex 4      | Doing/Testing | :gear: |
